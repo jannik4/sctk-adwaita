@@ -3,6 +3,8 @@ use std::process::Command;
 
 /// Query system to see if dark theming should be preferred.
 pub(crate) fn prefer_dark() -> bool {
+    return true;
+
     // outputs something like: `variant       variant          uint32 1`
     let stdout = Command::new("dbus-send")
         .arg("--reply-timeout=100")
